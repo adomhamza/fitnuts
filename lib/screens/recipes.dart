@@ -12,27 +12,6 @@ class Recipes extends StatefulWidget {
 }
 
 class _RecipesState extends State<Recipes> {
-  List data = [
-    {"Title": "Israeli Shaksuka", "Poster": "images/spinanch.png"},
-    {"Title": "The Dark Knight", "Poster": "images/spinanch.png"},
-    {"Title": "Eggs with Spinanch & Tomatoes", "Poster": "images/shaksuka.jpg"},
-    {"Title": "Israeli Shaksuka", "Poster": "images/almond.png"},
-    {
-      "Title": "Almond Milk Banana Oatmeal Smoothie",
-      "Poster": "images/shaksuka.jpg"
-    },
-    {"Title": "Israeli Shaksuka", "Poster": "images/almond.png"},
-    {"Title": "Batman Returns", "Poster": "images/shaksuka.jpg"},
-    {"Title": "Israeli Shaksuka", "Poster": "images/almond.png"},
-    {
-      "Title": "Almond Milk Banana Oatmeal Smoothie",
-      "Poster": "images/shaksuka.jpg"
-    },
-    {"Title": "Israeli Shaksuka", "Poster": "images/almond.png"},
-    {"Title": "Batman Returns", "Poster": "images/shaksuka.jpg"},
-    {"Title": "Batman Returns", "Poster": "images/shaksuka.jpg"},
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,11 +44,11 @@ class _RecipesState extends State<Recipes> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 25, right: 25, top: 15),
+        padding: const EdgeInsets.only(top: 15),
         child: SingleChildScrollView(
           child: Center(
             child: Wrap(
-              alignment: WrapAlignment.spaceBetween,
+              alignment: WrapAlignment.start,
               spacing: 30,
               runSpacing: 30,
               direction: Axis.horizontal,
@@ -102,26 +81,23 @@ class _RecipesState extends State<Recipes> {
                       bottom: 0,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 8.0, bottom: 10),
-                        child: Column(
-                            // crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                width: 90,
-                                child: Container(
-                                  color: Colors.grey.withOpacity(0.7),
-                                  child: Text(
-                                    item["Name"],
-                                    overflow: TextOverflow.visible,
-                                    // textAlign: TextAlign.start,
-                                    style: const TextStyle(
-                                      fontFamily: 'SemiBoldMonteserat',
-                                      fontSize: 12,
-                                      color: Colors.white,
-                                    ),
-                                  ),
+                        child: Column(children: [
+                          SizedBox(
+                            width: 90,
+                            child: Container(
+                              color: Colors.grey.withOpacity(0.7),
+                              child: Text(
+                                item["Name"],
+                                overflow: TextOverflow.visible,
+                                style: const TextStyle(
+                                  fontFamily: 'SemiBoldMonteserat',
+                                  fontSize: 12,
+                                  color: Colors.white,
                                 ),
                               ),
-                            ]),
+                            ),
+                          ),
+                        ]),
                       ),
                     )
                   ]),

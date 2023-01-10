@@ -57,61 +57,57 @@ class _ArticlesState extends State<Articles> {
                       ));
                 },
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    width: 340,
-                    // height: 379,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: Colors.white,
-                      ),
-                      child: Column(
-                        children: [
-                          ClipRRect(
-                              borderRadius: BorderRadius.circular(5),
-                              child: Image.asset(e["Image"])),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 18.0),
-                            child: Column(
-                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  padding: const EdgeInsets.only(top: 8.0, left: 25, right: 25),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.white,
+                    ),
+                    child: Column(
+                      children: [
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(5),
+                            child: Image.asset(e["Image"])),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 18.0),
+                          child: Column(
+                            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 11.0),
-                                  child: Text(
-                                    e["Topic"],
-                                    style: const TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'SemiBoldMonteserat',
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 11.0),
+                                child: Text(
+                                  e["Topic"],
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                    fontFamily: 'SemiBoldMonteserat',
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 13.0,
+                                  left: 20,
+                                  right: 20,
+                                ),
+                                child: ReadMoreText(
+                                  e["Read More"],
+                                  trimCollapsedText: 'Read More',
+                                  trimExpandedText: 'Show Less',
+                                  trimLines: 4,
+                                  trimMode: TrimMode.Line,
+                                  style: const TextStyle(
+                                      fontSize: 12,
+                                      fontFamily: 'RegularMonteserat',
                                       color: Colors.black,
-                                    ),
-                                  ),
+                                      height: 1.5),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    top: 13.0,
-                                    left: 20,
-                                    right: 20,
-                                  ),
-                                  child: ReadMoreText(
-                                    e["Read More"],
-                                    trimCollapsedText: 'Read More',
-                                    trimExpandedText: 'Show Less',
-                                    trimLines: 4,
-                                    trimMode: TrimMode.Line,
-                                    style: const TextStyle(
-                                        fontSize: 12,
-                                        fontFamily: 'RegularMonteserat',
-                                        color: Colors.black,
-                                        height: 1.5),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),

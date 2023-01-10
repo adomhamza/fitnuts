@@ -58,24 +58,4 @@ class _MainNavBarState extends State<MainNavBar> {
       ),
     );
   }
-
-  Widget buildNavBar(int index, Icon icon, String label) {
-    return BottomAppBar(
-      child: Row(
-        children: [
-          Column(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: icon,
-              ),
-              Text(
-                label,
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
 }

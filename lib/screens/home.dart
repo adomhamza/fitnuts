@@ -14,30 +14,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List data = [
-    {"Title": "Israeli Shaksuka", "Poster": "images/israel.png"},
-    {"Title": "Eggs with Spinanch & Tomatoes", "Poster": "images/spinanch.png"},
-    {
-      "Title": "Almond Milk Banana Oatmeal Smoothie",
-      "Poster": "images/shaksuka.jpg"
-    },
-    {"Title": "Israeli Shaksuka", "Poster": "images/almond.png"},
-    {
-      "Title": "Almond Milk Banana Oatmeal Smoothie",
-      "Poster": "images/shaksuka.jpg"
-    },
-    {"Title": "Israeli Shaksuka", "Poster": "images/almond.png"},
-    {"Title": "Batman Returns", "Poster": "images/shaksuka.jpg"},
-    {"Title": "Israeli Shaksuka", "Poster": "images/almond.png"},
-    {
-      "Title": "Almond Milk Banana Oatmeal Smoothie",
-      "Poster": "images/shaksuka.jpg"
-    },
-    {"Title": "Israeli Shaksuka", "Poster": "images/almond.png"},
-    {"Title": "Batman Returns", "Poster": "images/shaksuka.jpg"},
-    {"Title": "Batman Returns", "Poster": "images/shaksuka.jpg"},
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
